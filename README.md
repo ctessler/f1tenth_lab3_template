@@ -59,17 +59,28 @@ So, in summary, here's what we need to do:
 
 ## IV. Implementation
 
-Implement wall following to make the car drive autonomously around the Levine Hall map. Follow the inner walls of Levine. Which means follow left if the car is going counter-clockwise in the loop. (The first race we run will be counter-clockwise). You can implement this node in either C++ or Python.
+Implement wall following to make the car drive autonomously around the Levine Hall map. Follow the inner walls of Levine. Which means follow left- make sure the the car is going counter-clockwise in the loop. (The first race we run will be counter-clockwise). You can implement this node in either C++ or Python.
 
 ## V. Deliverables and Submission
 
-**Deliverable 1**: After you're finished, update the entire skeleton package directory with your `wall_follow` package and directly commit and push to the repo Github classroom created for you. Your commited code should start and run in simulation smoothly.
+**Deliverable 1**: After you're finished, update the entire skeleton package directory with your team's `wall_follow` package and directly commit and publish to GitHub. You will need to make sure the TA is added as a collaborator. Your committed code should start and run in simulation smoothly.The package should include a launch file that allows students to change variables from the command line for the following:
+- P, I, and D tuning variables
+- Vehicle Speed
 
-**Deliverable 2**: Make a screen cast of running your wall following node in the simulation. Include a link to the video on YouTube in **`SUBMISSION.md`**.
+**In Class Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
+
+- The vehicle autonomously drives a lap, following the left wall, around the track without collision.
+- The vehicle can drive with imperceptible oscillations after turning the first corner.
+- The vehicle can successfully make it past the trap in the bottom of the simulator map.
+
+**On Vehicle Demonstration:** The presentation on vehicle will be held in person on a track set up in the classroom. The vehicle will be expected to complete the following tasks:
+- The vehicle autonomously drives a lap, following the left wall, around the track without collision.
+- The vehicle can drive with imperceptible oscillations after turning the first corner.
+- The vehicle can successfully make it past traps located on the track.
 
 ## VI: Grading Rubric
 
-- Compilation: **10** Points
-- Implemented PID: **40** Points
-- Tuned PID: **40** Points
-- Video: **10** Points
+- Launch File: **10** Points
+- Implemented PID: **10** Points
+- Simulator Demonstration: **40** Points
+- Vehicle Demonstration: **40** Points
