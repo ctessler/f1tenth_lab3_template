@@ -67,7 +67,7 @@ Implement wall following to make the car drive autonomously around the Levine Ha
 - P, I, and D tuning variables
 - Vehicle Speed
 
-**In Class Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
+**Simulator Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
 
 - The vehicle autonomously drives a lap, following the left wall, around the track without collision.
 - The vehicle can drive with imperceptible oscillations after turning the first corner.
@@ -84,3 +84,23 @@ Implement wall following to make the car drive autonomously around the Levine Ha
 - Implemented PID: **10** Points
 - Simulator Demonstration: **40** Points
 - Vehicle Demonstration: **40** Points
+
+## VII: Extras
+Some things to note during implementation:
+
+-  Continual terminal output delays node processing and may impact the correct operation of the vehicle.
+Provide terminal output for the successful launching of the node and no more.
+
+### Clamping
+Clamping is used to control the calculated control output, *u(t)*, which is to be considered the steering_angle.
+While testing, it is possible this number will quickly get out of hand due to integral windup. Using a clamp
+will ensure *u(t)* is always within an acceptable range.
+The most the steering_angle can turn is by 20 degrees, in both directions. A negative steering_angle
+will turn your vehicle right, and a positive angle to the left. The steering_angle is stored under the
+AckermannDrive in radians. Be sure to keep this in mind while progressing through the lab.
+
+### The Trap
+On the South facing side of the simulator map lays a rectangular irregularity, illustrated below. This portion of the map is a trap. It is used to test implementations and catch the vehicle within its
+confines. Due to the tight corners, it can be nearly impossible for the vehicle to maneuver out once it has
+entered.
+![fig2](img/trap.png= 100x20)
