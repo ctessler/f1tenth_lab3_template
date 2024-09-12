@@ -59,17 +59,48 @@ So, in summary, here's what we need to do:
 
 ## IV. Implementation
 
-Implement wall following to make the car drive autonomously around the Levine Hall map. Follow the inner walls of Levine. Which means follow left if the car is going counter-clockwise in the loop. (The first race we run will be counter-clockwise). You can implement this node in either C++ or Python.
+Implement wall following to make the car drive autonomously around the Levine Hall map. Follow the inner walls of Levine. Which means follow left- make sure the the car is going counter-clockwise in the loop. (The first race we run will be counter-clockwise). You can implement this node in either C++ or Python.
 
 ## V. Deliverables and Submission
 
-**Deliverable 1**: After you're finished, update the entire skeleton package directory with your `wall_follow` package and directly commit and push to the repo Github classroom created for you. Your commited code should start and run in simulation smoothly.
+**Deliverable 1**: After you're finished, update the entire skeleton package directory with your team's `wall_follow` package and directly commit and publish to GitHub. You will need to make sure the TA is added as a collaborator. Your committed code should start and run in simulation smoothly.The package should include a launch file that allows students to change variables from the command line for the following:
+- P, I, and D tuning variables
+- Vehicle Speed
 
-**Deliverable 2**: Make a screen cast of running your wall following node in the simulation. Include a link to the video on YouTube in **`SUBMISSION.md`**.
+**Simulator Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
+
+- The vehicle autonomously drives a lap, following the left wall, around the track without collision.
+- The vehicle can drive with imperceptible oscillations after turning the first corner.
+- The vehicle can successfully make it past the trap in the bottom of the simulator map.
+
+**On Vehicle Demonstration:** The presentation on vehicle will be held in person on a track set up in the classroom. The vehicle will be expected to complete the following tasks:
+- The vehicle autonomously drives a lap, following the left wall, around the track without collision.
+- The vehicle can drive with imperceptible oscillations after turning the first corner.
+- The vehicle can successfully make it past traps located on the track.
 
 ## VI: Grading Rubric
 
-- Compilation: **10** Points
-- Implemented PID: **40** Points
-- Tuned PID: **40** Points
-- Video: **10** Points
+- Launch File: **10** Points
+- Implemented PID: **10** Points
+- Simulator Demonstration: **40** Points
+- Vehicle Demonstration: **40** Points
+
+## VII: Extras
+Some things to note during implementation:
+
+-  Continual terminal output delays node processing and may impact the correct operation of the vehicle.
+Provide terminal output for the successful launching of the node and no more.
+
+### Clamping
+Clamping is used to control the calculated control output, *u(t)*, which is to be considered the steering_angle.
+While testing, it is possible this number will quickly get out of hand due to integral windup. Using a clamp
+will ensure *u(t)* is always within an acceptable range.
+The most the steering_angle can turn is by 20 degrees, in both directions. A negative steering_angle
+will turn your vehicle right, and a positive angle to the left. The steering_angle is stored under the
+AckermannDrive in radians. Be sure to keep this in mind while progressing through the lab.
+
+### The Trap
+On the South facing side of the simulator map lays a rectangular irregularity, illustrated below. This portion of the map is a trap. It is used to test implementations and catch the vehicle within its
+confines. Due to the tight corners, it can be nearly impossible for the vehicle to maneuver out once it has
+entered.
+![fig2](img/trap.png= 100x20)
