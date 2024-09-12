@@ -103,4 +103,5 @@ AckermannDrive in radians. Be sure to keep this in mind while progressing throug
 On the South facing side of the simulator map lays a rectangular irregularity, illustrated below. This portion of the map is a trap. It is used to test implementations and catch the vehicle within its
 confines. Due to the tight corners, it can be nearly impossible for the vehicle to maneuver out once it has
 entered.
-![fig2](img/trap.png= 100x20)
+
+<img src="img/trap.PNG" width=50% height=50%>
