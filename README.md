@@ -67,6 +67,10 @@ Implement wall following to make the car drive autonomously around the Levine Ha
 - P, I, and D tuning variables
 - Vehicle Speed
 
+```bash
+ros2 launch wall_follow_launch.py speed:=2.0 P:=2.0 I:=2.0 D:=2.0
+```
+
 **Simulator Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
 
 - The vehicle autonomously drives a lap, following the left wall, around the track without collision.
