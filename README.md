@@ -71,13 +71,16 @@ Implement wall following to make the car drive autonomously around the Levine Ha
 ros2 launch wall_follow_launch.py speed:=2.0 P:=2.0 I:=2.0 D:=2.0
 ```
 
-**Simulator Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
+**Demonstrations**: Students will be given 20 minutes each to demo in class between two days. Teams will be asked to present in a round robin fashion- in numerical order. If there remains any extra time between implementations, the next group to present will be allowed to start their 20 minute slot. Leftover teams will be allowed to present in the same numerical order in whatever leftover time exists.
+
+**Simulator Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Students should have their implementations ready for demonstration before their allotted time (simulator already pulled up, teleop, etc.). Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
+
 
 - The vehicle autonomously drives a lap, following the left wall, around the track without collision.
 - The vehicle can drive with imperceptible oscillations after turning the first corner.
 - The vehicle can successfully make it past the trap in the bottom of the simulator map.
 
-**On Vehicle Demonstration:** The presentation on vehicle will be held in person on a track set up in the classroom. The vehicle will be expected to complete the following tasks:
+**On Vehicle Demonstration:** The presentation on vehicle will be held in person on a track set up in the classroom. Students will have whatever is remaining of their 20 minutes on vehicle to demo. The vehicle will be expected to complete the following tasks:
 - The vehicle autonomously drives a lap, following the left wall, around the track without collision.
 - The vehicle can drive with imperceptible oscillations after turning the first corner.
 - The vehicle can successfully make it past traps located on the track.
