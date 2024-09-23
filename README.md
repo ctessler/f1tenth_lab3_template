@@ -75,6 +75,7 @@ ros2 launch wall_follow_launch.py speed:=2.0 P:=2.0 I:=2.0 D:=2.0
 
 **Simulator Demonstration**: Students will be required to demonstrate their team's implementation in class on the specified evaluation date. Students should have their implementations ready for demonstration before their allotted time (simulator already pulled up, teleop, etc.). Team's will test their implementation in the Levine Hall (default) map. A successful demonstration includes:
 
+
 - The vehicle autonomously drives a lap, following the left wall, around the track without collision.
 - The vehicle can drive with imperceptible oscillations after turning the first corner.
 - The vehicle can successfully make it past the trap in the bottom of the simulator map.
